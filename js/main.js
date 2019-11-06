@@ -214,3 +214,98 @@ if ( '370600000000' < manoNumeris) {
 } else {
     console.log(false);
 } 
+console.log('-------------------------');
+console.log('-------------------------');
+console.log('-------------------------');
+console.log('CIKLAI');
+
+// console.log('1 atsispaudimai');
+// console.log('2 atsispaudimai');
+// console.log('3 atsispaudimai');
+// console.log('4 atsispaudimai');
+// console.log('5 atsispaudimai');
+// console.log('6 atsispaudimai');
+// console.log('7 atsispaudimai');
+
+
+let kiekAtsispaudimu = 7;
+kiekAtsispaudimu++;
+
+for ( let n=1; n<=kiekAtsispaudimu; n++ ) {
+    console.log(n + ' atsispaudimai');
+}
+
+
+console.log(skaitmenys);
+
+for ( let i=0; i<skaitmenys.length; i++ ) {
+    console.log(i, '-', skaitmenys[i]);
+}
+
+console.log(pasisveikinimas);
+
+for ( let i=0; i<pasisveikinimas.length; i++ ) {
+    console.log(i, '-', pasisveikinimas[i]);
+}
+
+// sukame cikla per teksto raides
+for ( let i=0; i<pasisveikinimas.length; i++ ) {
+    // ar einamoji raide yra ne tarpas
+    if ( pasisveikinimas[i] !== ' ' ) {
+        // ja spausdiname
+        console.log(i, '-', pasisveikinimas[i]);
+    }
+}
+
+console.log('----------------------');
+
+const atbuliaiva = 'atbuliaiva';
+
+for ( let i=atbuliaiva.length-1; i>=0; i-- ) {
+    console.log( atbuliaiva[i] );
+}
+
+console.log('----------------------');
+
+for ( let i=atbuliaiva.length; i>0; i-- ) {
+    console.log( atbuliaiva[i-1] );
+}
+
+
+console.log('----------------------');
+
+const skaiciukas = 456789;
+console.log( skaiciukas );
+
+const tekstinisSkaiciukas = '' + skaiciukas;
+console.log(tekstinisSkaiciukas);
+
+const antrasSkaiciukas = tekstinisSkaiciukas[1];
+console.log(antrasSkaiciukas);
+
+console.log('----------------------');
+console.log('SKAICIU SUMA INTERVALE');
+
+let nuo = 0;
+let iki = 4;
+let nuoIkiSuma = 0;
+
+for ( let i=nuo; i<=iki; i++ ) {
+    nuoIkiSuma = nuoIkiSuma + i;
+    console.log(i, ' - ', nuoIkiSuma);
+}
+
+console.log('Suma intervale nuo ' + nuo + ' iki ' + iki + ' yra lygu ' + nuoIkiSuma);
+
+
+
+nuo = 0;
+iki = 100;
+nuoIkiSuma = 0;
+
+for ( let i=nuo; i<=iki; i++ ) {
+    nuoIkiSuma = nuoIkiSuma + i;
+    console.log(i, ' - ', nuoIkiSuma);
+}
+
+console.log('Suma intervale nuo ' + nuo + ' iki ' + iki + ' yra lygu ' + nuoIkiSuma);
