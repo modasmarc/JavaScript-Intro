@@ -309,3 +309,184 @@ for ( let i=nuo; i<=iki; i++ ) {
 }
 
 console.log('Suma intervale nuo ' + nuo + ' iki ' + iki + ' yra lygu ' + nuoIkiSuma);
+
+
+console.log('----------------------');
+console.log('SKAICIU KIEKIS INTERVALE BE LIEKANOS');
+
+let intStart = 0;
+let intEnd = 11;
+let daliklis = 3;
+let kartai = 0;
+
+// reikia pereiti per visus skaicius intervale
+    // jeigu einamasis skaicius dalinasi be liekanos
+        // kartai++
+
+for ( let i=intStart; i<=intEnd; i++ ) {
+    if ( i % daliklis === 0 ) {
+        kartai++;
+    }
+}
+
+console.log('Skaičių intervale tarp ' + intStart + ' ir ' + intEnd + ', besidalinančių be liekanos iš ' + daliklis + ' yra ' + kartai + ' vienetai.');
+
+
+
+intStart = 0;
+intEnd = 11;
+daliklis = 5;
+kartai = 0;
+
+for ( let i=intStart; i<=intEnd; i++ ) {
+    if ( i % daliklis === 0 ) {
+        kartai++;
+    }
+}
+
+console.log('Skaičių intervale tarp ' + intStart + ' ir ' + intEnd + ', besidalinančių be liekanos iš ' + daliklis + ' yra ' + kartai + ' vienetai.');
+
+
+intStart = 0;
+intEnd = 11;
+daliklis = 7;
+kartai = 0;
+
+for ( let i=intStart; i<=intEnd; i++ ) {
+    if ( i % daliklis === 0 ) {
+        kartai++;
+    }
+}
+
+console.log('Skaičių intervale tarp ' + intStart + ' ir ' + intEnd + ', besidalinančių be liekanos iš ' + daliklis + ' yra ' + kartai + ' vienetai.');
+
+
+console.log('-------------------------');
+console.log('-------------------------');
+console.log('-------------------------');
+console.log('FUNKCIJOS');
+
+function tusciaFunkcija() {
+    return false;
+}
+
+console.log( tusciaFunkcija() );
+
+console.log('-------------------------');
+
+function daugyba( skaicius1, skaicius2 ) {
+    // console.log('Man dave:', skaicius1, skaicius2,  skaicius1 * skaicius2);
+
+    if ( typeof(skaicius1) !== 'number' ) {
+        return 'Durnelis 1...';
+    }
+    if ( typeof(skaicius2) !== 'number' ) {
+        return 'Durnelis 2...';
+    }
+
+    return skaicius1 * skaicius2;
+}
+
+console.log( daugyba( 3, 8 ) );
+console.log( daugyba( 3, -8 ) );
+console.log( daugyba( 3, 'asdf' ) );
+console.log( daugyba( -3, 8 ) );
+console.log( daugyba( true, 8 ) );
+console.log( daugyba( -3, -8 ) );
+
+
+console.log('----------------------');
+console.log('SKAITMENU KIEKIS SKAICIUJE');
+
+function skaitmenuKiekisSkaiciuje( number ) {
+    // console.log('Gavau', number);
+
+    // if ( typeof(number) !== 'number' ) {
+    //     return 'Pateikta netinkamo tipo reikšmė, turi buti skaicius.';
+    // }
+    // if ( ''+number === 'NaN' ) {
+    //     return 'Pateiktas NaN, galimi tik baigtiniai skaiciai.';
+    // }
+    // if ( ''+number === 'Infinity' ) {
+    //     return 'Pateiktas Infinity, galimi tik baigtiniai skaiciai.';
+    // }
+
+    if ( typeof(number) !== 'number' ||
+         isFinite(number) === false ) {
+        return 'Pateikta netinkamo tipo reikšmė.';
+    }
+
+    // spejamas skaitmenu kiekis
+    let ilgis = (''+number).length;
+
+    // eliminuojame, jei yra kablelis (taskas)
+    if ( number % 1 !== 0 ) {
+        ilgis--;
+    }
+
+    // eliminuojame, jei yra minusas
+    if ( number < 0 ) {
+        ilgis--;
+    }
+
+    return ilgis;
+}
+
+console.log( skaitmenuKiekisSkaiciuje( true ) );
+console.log( skaitmenuKiekisSkaiciuje( 'asd' ) );
+console.log( skaitmenuKiekisSkaiciuje( NaN ) );
+console.log( skaitmenuKiekisSkaiciuje( Infinity ) );
+
+console.log( skaitmenuKiekisSkaiciuje( 5 ) );
+console.log( skaitmenuKiekisSkaiciuje( 781 ) );
+console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
+console.log( skaitmenuKiekisSkaiciuje( 3.1415 ) );
+console.log( skaitmenuKiekisSkaiciuje( -159 ) );
+console.log( skaitmenuKiekisSkaiciuje( -3.1415 ) );
+console.log( skaitmenuKiekisSkaiciuje( 0.000001 ) );
+
+console.log( skaitmenuKiekisSkaiciuje( 0.0000001 ) );
+console.log( skaitmenuKiekisSkaiciuje( -0.0000001 ) );
+
+
+console.log('----------------------');
+console.log('DIDZIAUSIAS SKAICIUS SARASE');
+
+function didziausiasSkaiciusSarase( list ) {
+
+    if ( Array.isArray(list) === false ) {
+        return 'Pateikta netinkamo tipo reikšmė.';
+    }
+    if ( list.length === 0 ) {
+        return 'Pateiktas sąrašas negali būti tuščias.';
+    }
+
+    let biggest = list[0];
+
+    // einu per skaiciu sarasa
+        // jeigu, einamasis skaicius didesnis uz mano jau zinoma didziausia
+            // biggest = einamasis skaicius;
+
+    for ( let i=1; i<list.length; i++ ) {
+        if ( list[i] > biggest ) {
+            biggest = list[i];
+        }
+    }
+
+    return biggest;
+}
+
+console.log( didziausiasSkaiciusSarase( 425 ) );
+console.log( didziausiasSkaiciusSarase( 'pomidoras' ) );
+console.log( didziausiasSkaiciusSarase( [] ) );
+
+console.log( didziausiasSkaiciusSarase( [ 1 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 1, 2, 3 ] ) );
+console.log( didziausiasSkaiciusSarase( [ -5, 78, 14, 0, 18 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ) );
+console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
+
+
+console.log( didziausiasSkaiciusSarase( [ 'asdf', 78, 14, 0, 18 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 'asdf', 'asdf', 'asdf' ] ) );
+
