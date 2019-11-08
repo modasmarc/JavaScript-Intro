@@ -587,7 +587,10 @@ console.log( didziausiasSkaiciusSarase( [ 'asdf', 14, 0, false, -0, 0.1234, -Inf
     console.log( dalyba(null, NaN) );
     console.log( dalyba('eards', 8) );
     console.log( dalyba(1, 0) );
+    console.log( dalyba(1, [5, 2]) );
+    console.log( dalyba(null, 5) );
+    console.log( dalyba(1, [5]) );
     
     console.log( dalyba(3, 1) );
     console.log( dalyba(10, 5) );
-    console.log( dalyba(1/3, 3) ); 
+    console.log( dalyba(1/3, 3) );
