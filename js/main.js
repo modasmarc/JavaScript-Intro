@@ -387,18 +387,18 @@ function daugyba( skaicius1, skaicius2 ) {
     return skaicius1 * skaicius2;
 }
 
-    console.log( daugyba( 3, 8 ) );
-    console.log( daugyba( 3, -8 ) );
-    console.log( daugyba( 3, 'asdf' ) );
-    console.log( daugyba( -3, 8 ) );
-    console.log( daugyba( true, 8 ) );
-    console.log( daugyba( -3, -8 ) );
+console.log( daugyba( 3, 8 ) );
+console.log( daugyba( 3, -8 ) );
+console.log( daugyba( 3, 'asdf' ) );
+console.log( daugyba( -3, 8 ) );
+console.log( daugyba( true, 8 ) );
+console.log( daugyba( -3, -8 ) );
 
 
-    console.log('----------------------');
-    console.log('SKAITMENU KIEKIS SKAICIUJE');
+console.log('----------------------');
+console.log('SKAITMENU KIEKIS SKAICIUJE');
 
-    function skaitmenuKiekisSkaiciuje( number ) {
+function skaitmenuKiekisSkaiciuje( number ) {
     // console.log('Gavau', number);
 
     // if ( typeof(number) !== 'number' ) {
@@ -432,27 +432,27 @@ function daugyba( skaicius1, skaicius2 ) {
     return ilgis;
 }
 
-    console.log( skaitmenuKiekisSkaiciuje( true ) );
-    console.log( skaitmenuKiekisSkaiciuje( 'asd' ) );
-    console.log( skaitmenuKiekisSkaiciuje( NaN ) );
-    console.log( skaitmenuKiekisSkaiciuje( Infinity ) );
+console.log( skaitmenuKiekisSkaiciuje( true ) );
+console.log( skaitmenuKiekisSkaiciuje( 'asd' ) );
+console.log( skaitmenuKiekisSkaiciuje( NaN ) );
+console.log( skaitmenuKiekisSkaiciuje( Infinity ) );
 
-    console.log( skaitmenuKiekisSkaiciuje( 5 ) );
-    console.log( skaitmenuKiekisSkaiciuje( 781 ) );
-    console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
-    console.log( skaitmenuKiekisSkaiciuje( 3.1415 ) );
-    console.log( skaitmenuKiekisSkaiciuje( -159 ) );
-    console.log( skaitmenuKiekisSkaiciuje( -3.1415 ) );
-    console.log( skaitmenuKiekisSkaiciuje( 0.000001 ) );
+console.log( skaitmenuKiekisSkaiciuje( 5 ) );
+console.log( skaitmenuKiekisSkaiciuje( 781 ) );
+console.log( skaitmenuKiekisSkaiciuje( 37060123456 ) );
+console.log( skaitmenuKiekisSkaiciuje( 3.1415 ) );
+console.log( skaitmenuKiekisSkaiciuje( -159 ) );
+console.log( skaitmenuKiekisSkaiciuje( -3.1415 ) );
+console.log( skaitmenuKiekisSkaiciuje( 0.000001 ) );
 
-    console.log( skaitmenuKiekisSkaiciuje( 0.0000001 ) );
-    console.log( skaitmenuKiekisSkaiciuje( -0.0000001 ) );
+console.log( skaitmenuKiekisSkaiciuje( 0.0000001 ) );
+console.log( skaitmenuKiekisSkaiciuje( -0.0000001 ) );
 
 
-    console.log('----------------------');
-    console.log('DIDZIAUSIAS SKAICIUS SARASE');
+console.log('----------------------');
+console.log('DIDZIAUSIAS SKAICIUS SARASE');
 
-    function didziausiasSkaiciusSarase( list ) {
+function didziausiasSkaiciusSarase( list ) {
 
     if ( Array.isArray(list) === false ) {
         return 'Pateikta netinkamo tipo reikšmė.';
@@ -483,20 +483,20 @@ function daugyba( skaicius1, skaicius2 ) {
     return biggest;
 }
 
-    console.log( didziausiasSkaiciusSarase( 425 ) );
-    console.log( didziausiasSkaiciusSarase( 'pomidoras' ) );
-    console.log( didziausiasSkaiciusSarase( [] ) );
-    console.log( didziausiasSkaiciusSarase( [ 'asdf', 'we', 'jhg' ] ) );
+console.log( didziausiasSkaiciusSarase( 425 ) );
+console.log( didziausiasSkaiciusSarase( 'pomidoras' ) );
+console.log( didziausiasSkaiciusSarase( [] ) );
+console.log( didziausiasSkaiciusSarase( [ 'asdf', 'we', 'jhg' ] ) );
 
-    console.log( didziausiasSkaiciusSarase( [ 1 ] ) );
-    console.log( didziausiasSkaiciusSarase( [ 1, 2, 3 ] ) );
-    console.log( didziausiasSkaiciusSarase( [ -5, 78, 14, 0, 18 ] ) );
-    console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ) );
-    console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
-    console.log( didziausiasSkaiciusSarase( [ 78, 'asdf', 14, 0, 18 ] ) );
-    console.log( didziausiasSkaiciusSarase( [ 78, 14, 0, 18, 'asdf' ] ) );
-    console.log( didziausiasSkaiciusSarase( [ 'asdf', 99, 14, 0, 18 ] ) );
-    console.log( didziausiasSkaiciusSarase( [ 'asdf', 14, 0, false, -0, 0.1234, -Infinity, NaN, Infinity, -18, true, 87, 12 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 1 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 1, 2, 3 ] ) );
+console.log( didziausiasSkaiciusSarase( [ -5, 78, 14, 0, 18 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 69, 69, 69, 69, 66 ] ) );
+console.log( didziausiasSkaiciusSarase( [ -1, -2, -3, -4, -5, -6, -7, -8 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 78, 'asdf', 14, 0, 18 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 78, 14, 0, 18, 'asdf' ] ) );
+console.log( didziausiasSkaiciusSarase( [ 'asdf', 99, 14, 0, 18 ] ) );
+console.log( didziausiasSkaiciusSarase( [ 'asdf', 14, 0, false, -0, 0.1234, -Infinity, NaN, Infinity, -18, true, 87, 12 ] ) );
 
     // einu per skaiciu sarasa
         // jeigu, einamasis skaicius didesnis uz mano jau zinoma didziausia
@@ -509,7 +509,7 @@ function daugyba( skaicius1, skaicius2 ) {
     }
 
     return biggest;
-
+    
     console.log('----------------------');
     console.log('ISRINKTI RAIDES');
     
@@ -555,31 +555,35 @@ function daugyba( skaicius1, skaicius2 ) {
     console.log( isrinktiRaides( 'abcdefghijkl', NaN ) );
     console.log( isrinktiRaides( 'abcdefghijkl', Infinity ) );
     console.log( isrinktiRaides( 'abcdefghijkl', 1.5 ) );
+    
     console.log( isrinktiRaides( 'abcdefg', 2 ) );
     console.log( isrinktiRaides( 'abcdefghijkl', 3 ) );
     console.log( isrinktiRaides( 'abcdefghijkl', -3 ) );
+    
     console.log('----------------------');
     console.log('DALYBA');
-
-function dalyba( s1, s2 ) {
-    if ( isFinite(s1) === false ||
-         s1 === null ||
-         Array.isArray(s1) === true ) {
-        return 'Duok pirma skaiciu'
+    
+    function dalyba( s1, s2 ) {
+        if ( isFinite(s1) === false ) {
+            return 'Duok pirma skaiciu'
+        }
+        if ( isFinite(s2) === false ) {
+            return 'Duok antra skaiciu'
+        }
+        if ( s2 === 0 ) {
+            return 'Dalyba is nulio negalima';
+        }
+    
+        return s1 / s2;
     }
-    if ( isFinite(s2) === false ||
-         s2 === null ||
-         Array.isArray(s2) === true ) {
-        return 'Duok antra skaiciu'
-    }
-    if ( s2 === 0 ) {
+    
+    
+    console.log( dalyba('a', 'b') );
+    console.log( dalyba(Infinity, -7) );
     console.log( dalyba(null, NaN) );
     console.log( dalyba('eards', 8) );
     console.log( dalyba(1, 0) );
-    console.log( dalyba(1, [5, 2]) );
-    console.log( dalyba(null, 5) );
-    console.log( dalyba(1, [5]) );
-
+    
     console.log( dalyba(3, 1) );
     console.log( dalyba(10, 5) );
-    console.log( dalyba(1/3, 3) );
+    console.log( dalyba(1/3, 3) ); 
