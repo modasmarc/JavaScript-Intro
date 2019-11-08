@@ -564,11 +564,15 @@ console.log( didziausiasSkaiciusSarase( [ 'asdf', 14, 0, false, -0, 0.1234, -Inf
     console.log('DALYBA');
     
     function dalyba( s1, s2 ) {
-        if ( isFinite(s1) === false ) {
-            return 'Duok pirma skaiciu'
-        }
-        if ( isFinite(s2) === false ) {
-            return 'Duok antra skaiciu'
+        if ( isFinite(s1) === false ||
+         s1 === null ||
+         Array.isArray(s1) === true ) {
+        return 'Duok pirma skaiciu'
+    }
+        if ( isFinite(s2) === false ||
+        s2 === null ||
+        Array.isArray(s2) === true ) {
+        return 'Duok antra skaiciu'
         }
         if ( s2 === 0 ) {
             return 'Dalyba is nulio negalima';
