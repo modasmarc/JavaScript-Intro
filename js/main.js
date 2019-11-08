@@ -594,3 +594,67 @@ console.log( didziausiasSkaiciusSarase( [ 'asdf', 14, 0, false, -0, 0.1234, -Inf
     console.log( dalyba(3, 1) );
     console.log( dalyba(10, 5) );
     console.log( dalyba(1/3, 3) );
+
+
+    console.log('----------------------');
+    console.log('LAIKRODIS');
+    
+    function clock() {
+        // 00:00 - 59:59
+    
+        for ( let minutes=0; minutes<3; minutes++ ) {
+            for ( let seconds=0; seconds<4; seconds++ ) {
+                for ( let lett=0; lett<2; lett++ ) {
+                    console.log( minutes + ':' + seconds + ' - ' + ( lett === 0 ? 'A' : 'B' ) );
+                }
+            }
+        }
+    
+        return;
+    }
+    
+    clock();
+    
+    
+    console.log('----------------------');
+    console.log('REKURSIJA');
+    
+    const failai = [
+        [
+            ['a', 'b', 'c'],
+            ['e', 'f'],
+            'g',
+            'h'
+        ],
+        [
+            ['i', 'j'],
+            'k'
+        ],
+        'l',
+        'm',
+        'n'
+    ];
+    
+    const failai2 = [
+        ['a', 'b'],
+        'c',
+        'd'
+    ];
+    
+    // console.log( failai );
+    
+    
+    function listAllItems( list ) {
+        if ( Array.isArray(list) === true ) {
+            // kadangi gavau sarasa, tai einu per jo narius
+            for ( let i=0; i<list.length; i++ ) {
+                listAllItems(list[i]);
+            }
+        } else {
+            // gavau baigtine reiksme, kuria spausdinu
+            console.log( list );
+        }
+        return;
+    }
+    
+    listAllItems( failai2 ) 
